@@ -7,7 +7,7 @@ workflows:
   schedule-deploy:
     triggers:
       - schedule: 
-        cron: 
+        cron: "0 0 12 * * ?"
         filters:
           branches:
             only:
