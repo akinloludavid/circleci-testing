@@ -1,5 +1,8 @@
 version: 2.1 
 workflows:
+  testing:
+    jobs:
+      - test
   schedule-workflow:
     triggers:
       - schedule: 
