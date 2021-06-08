@@ -2,18 +2,19 @@ version: 2.1
 workflows:
   testing:
     jobs:
-      - test
-  schedule-workflow:
-    triggers:
-      - schedule: 
-          cron: "0 * * * *"
-          filters:
-            branches:
-              only:
-                 - main
-    jobs:
-      - test
-      - deploy
+       - test
+#   schedule-workflow:
+#     triggers:
+#       - schedule: 
+#           cron: "0 * * * *"
+#           filters:
+#             branches:
+#               only:
+#                  - main
+#     jobs:
+#       - test
+#       - deploy
+
 jobs:
   test:
     docker:
