@@ -11,9 +11,9 @@ jobs:
     steps:
       - checkout 
       - run:
-        name: Install all dependencies
-        command: yarn 
+          name: Install all dependencies
+          command: yarn 
       - run: 
-        name: Run test
-        command: yarn test
+          name: Run test
+          command: yarn test
       
