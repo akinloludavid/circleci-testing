@@ -7,11 +7,11 @@ workflows:
   schedule-deploy:
     triggers:
       - schedule: 
-        cron: "0 0 12 * * ?"
-        filters:
-          branches:
-            only:
-              - main
+          cron: "0 0 12 * * ?"
+          filters:
+            branches:
+              only:
+                - main
     jobs:
       - test
       - deploy
@@ -33,7 +33,7 @@ jobs:
     steps: 
       - checkout 
       - run: 
-        name: Deploy 
-        command: echo "I am deploying"
+          name: Deploy 
+          command: echo "I am deploying"
         
       
