@@ -1,13 +1,9 @@
 version: 2.1 
-
 workflows:
-  test-deploy:
-    jobs:
-      - test
-  schedule-deploy:
+  schedule-workflow:
     triggers:
       - schedule: 
-          cron: "0 0 12 * * ?"
+          cron: "0 * * * *"
           filters:
             branches:
               only:
@@ -35,5 +31,7 @@ jobs:
       - run: 
           name: Deploy 
           command: echo "I am deploying"
+
+
         
       
